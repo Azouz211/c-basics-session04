@@ -13,14 +13,33 @@
 
             #region Question 2
 
-            int[,] ShelfCopies = new int[2, 2]             {
-                { 3, 5 },
-                { 1, 4 }
-            };
+            //int[,] ShelfCopies = new int[2, 2]             {
+            //    { 3, 5 },
+            //    { 1, 4 }
+            //};
 
-            Console.WriteLine(ShelfCopies[1, 0]);
+            //Console.WriteLine(ShelfCopies[1, 0]);
+
+            #endregion
+
+            #region Question 3
+
+            PrintWelcomeMessage();
 
             #endregion
         }
+
+
+
+
+        #region User Defined Func
+
+        public static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }       
+
+
+        #endregion
     }
 }
