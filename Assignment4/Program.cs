@@ -29,8 +29,16 @@
             #endregion
 
             #region Question 4
-            string title = "Clean Code";
-            PrintBookTitle(title);
+            //string title = "Clean Code";
+            //PrintBookTitle(title);
+
+            #endregion
+
+            #region Question 5
+            int pages = 400;
+            AddBonusPages(ref pages);   // add bonus pages to the original pages (ref)
+            Console.WriteLine( pages);
+
 
             #endregion
         }
@@ -49,6 +57,12 @@
         public static void PrintBookTitle(string title)
         {
             Console.WriteLine($"Book Title: {title}");
+        }
+
+
+        public static int AddBonusPages(ref int pages)
+        { 
+            return pages += 50;
         }
 
 
