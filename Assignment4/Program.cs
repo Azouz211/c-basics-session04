@@ -35,10 +35,18 @@
             #endregion
 
             #region Question 5
-            int pages = 400;
-            AddBonusPages(ref pages);   // add bonus pages to the original pages (ref)
-            Console.WriteLine( pages);
+            //int pages = 400;
+            //AddBonusPages(ref pages);   // add bonus pages to the original pages (ref)
+            //Console.WriteLine( pages);
 
+
+            #endregion
+
+            #region Question 6 
+
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(ref prices); // apply discount to first price (25.5)
+            Console.WriteLine(prices[0]);
 
             #endregion
         }
@@ -65,6 +73,10 @@
             return pages += 50;
         }
 
+        public static double ApplyDiscount(ref double[] prices)
+        {
+           return prices[0] -= 5.0; 
+        }
 
         #endregion
     }
