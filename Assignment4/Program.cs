@@ -24,7 +24,13 @@
 
             #region Question 3
 
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
+
+            #endregion
+
+            #region Question 4
+            string title = "Clean Code";
+            PrintBookTitle(title);
 
             #endregion
         }
@@ -38,6 +44,12 @@
         {
             Console.WriteLine("Welcome to the Library!");
         }       
+
+
+        public static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book Title: {title}");
+        }
 
 
         #endregion
