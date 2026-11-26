@@ -71,15 +71,24 @@
 
             #region Question 9
 
-            string title = "Clean Code";
-            if (TryGetPrice(title, out double price))
-            {
-                Console.WriteLine(price);
-            }
-            else
-            {
-                Console.WriteLine("Price not found.");
-            }
+            //string title = "Clean Code";
+            //if (TryGetPrice(title, out double price))
+            //{
+            //    Console.WriteLine(price);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Price not found.");
+            //}
+            #endregion
+
+            #region Question 10
+
+            
+            PrintBookInfo("title");
+
+            PrintBookInfo("title" , 400); 
+
             #endregion
         }
 
@@ -131,6 +140,11 @@
             }
 
 
+        }
+
+        public static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Book Title: {title}, Pages: {pages}");
         }
 
         #endregion
