@@ -93,8 +93,15 @@
 
             #region Question 11
 
-            PrintBookInfo(400 , "title"); // This will cause a compile-time error
-                                          // because the order of parameters does not match the method signature.
+            //PrintBookInfo(400 , "title"); // This will cause a compile-time error
+            //                              // because the order of parameters does not match the method signature.
+
+            #endregion
+
+            #region Question 12 
+
+            string[] titles = { "Clean Code", "The Pragmatic Programmer", "Design Patterns" };
+            PrintAllTitles(titles);
 
             #endregion
         }
@@ -154,6 +161,15 @@
             Console.WriteLine($"Book Title: {title}, Pages: {pages}");
         }
 
+
+        public static void PrintAllTitles(params string[] titles)
+
+            { foreach
+                (string title in titles)
+            
+                Console.WriteLine(title);}
+        
+        
         #endregion
     }
 }
