@@ -44,16 +44,27 @@
 
             #region Question 6 
 
-            //double[] prices = { 25.5, 40.0 };
+            double[] prices = { 25.5, 40.0 };
             //ApplyDiscount(ref prices); // apply discount to first price (25.5)
             //Console.WriteLine(prices[0]);
 
             #endregion
 
             #region Question 7
-            int pages = 400;
-            AddBonusPages(pages);   // Did not use ref keyword, so the original pages variable is not modified
-            Console.WriteLine(pages);
+            //int pages = 400;
+            //AddBonusPages(pages);   // Did not use ref keyword, so the original pages variable is not modified
+            //Console.WriteLine(pages);
+
+
+            #endregion
+
+            #region Question 8 
+
+            
+
+            ReplaceArray(ref prices);
+
+            Console.WriteLine(prices.Length);
 
 
             #endregion
@@ -85,6 +96,13 @@
         {
            return prices[0] -= 5.0; 
         }
+
+        public static double ReplaceArray(ref double[] prices) 
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
+            return prices[0];
+        }
+
 
         #endregion
     }
