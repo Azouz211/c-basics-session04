@@ -44,7 +44,7 @@
 
             #region Question 6 
 
-            double[] prices = { 25.5, 40.0 };
+            //double[] prices = { 25.5, 40.0 };
             //ApplyDiscount(ref prices); // apply discount to first price (25.5)
             //Console.WriteLine(prices[0]);
 
@@ -60,13 +60,26 @@
 
             #region Question 8 
 
-            
-
-            ReplaceArray(ref prices);
-
-            Console.WriteLine(prices.Length);
 
 
+            //ReplaceArray(ref prices);
+
+            //Console.WriteLine(prices.Length);
+
+
+            #endregion
+
+            #region Question 9
+
+            string title = "Clean Code";
+            if (TryGetPrice(title, out double price))
+            {
+                Console.WriteLine(price);
+            }
+            else
+            {
+                Console.WriteLine("Price not found.");
+            }
             #endregion
         }
 
@@ -103,6 +116,22 @@
             return prices[0];
         }
 
+
+        public static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0.0;
+                return false;
+            }
+
+
+        }
 
         #endregion
     }
